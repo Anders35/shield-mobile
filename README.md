@@ -304,3 +304,46 @@ Fungsi `setState()` digunakan untuk mengubah state dari _stateful widget_. Varia
     ...
     ```
 9. Melakukan `add`-`commit`-`push` ke GitHub.
+
+## Tugas 8
+
+### Apa kegunaan `const` di Flutter? Jelaskan apa keuntungan ketika menggunakan `const` pada kode Flutter. Kapan sebaiknya kita menggunakan `const`, dan kapan sebaiknya tidak digunakan?
+
+`const` digunakan untuk membuat objek yang bersifat _immutable_ dan dapat diinisialisasi pada waktu kompilasi. Keuntungan menggunakan `const` adalah efisiensi memori, karena objek yang dideklarasikan sebagai `const` hanya dibuat sekali dan dapat digunakan kembali tanpa alokasi memori tambahan. `const` sebaiknya digunakan ketika kita yakin nilai dari objek tidak akan berubah selama _runtime_ dan sebaiknya tidak digunakan ketika nilai objek dapat berubah atau dihitung ulang selama runtime.
+ 
+### Jelaskan dan bandingkan penggunaan _Column_ dan _Row_ pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+
+_Column_ digunakan untuk menyusun widget secara vertikal, sedangkan _Row_ digunakan untuk menyusun widget secara horizontal. 
+
+Contoh implementasi _Column_:
+```dart
+Column(
+  children: [
+    Text('Item 1'),
+    Text('Item 2'),
+    Text('Item 3'),
+  ],
+)
+```
+
+Contoh implementasi _Row_:
+```dart
+Row(
+  children: [
+    Icon(Icons.star),
+    Text('Starred'),
+  ],
+)
+```
+ 
+### Sebutkan apa saja elemen input yang kamu gunakan pada halaman _form_ yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+
+Elemen input yang saya gunakan adalah `TextFormField` untuk memasukkan nama, harga, jumlah, dan deskripsi produk. Elemen input lain yang tidak digunakan adalah `Checkbox`, `Radio`, `Switch`, `Slider`, dan `DropdownButton`. 
+
+### Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+
+Untuk mengatur tema dalam aplikasi Flutter, kita dapat mendefinisikan `ThemeData` di dalam widget `MaterialApp`. Dalam aplikasi ini, saya mengimplementasikan tema dengan mengatur `colorScheme` pada `ThemeData`, yang digunakan untuk menentukan warna utama, sekunder, warna latar belakang, dan teks.
+ 
+### Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+
+Saya menggunakan `Navigator` untuk menangani navigasi antar halaman dan menggunakan fungsi `pushReplacement()` untuk mengganti halaman sebelumnya dengan halaman sekarang.
